@@ -13,6 +13,7 @@ const addTodo = (newtodo) =>  setTodos([...todos , newtodo]) ;
         <div>
 
  <AddTask  addTask={addTodo}  />
+ 
         <ul> 
 
       { todos.map ((todo, index) => (
@@ -25,7 +26,7 @@ const addTodo = (newtodo) =>  setTodos([...todos , newtodo]) ;
         setTodos(todos.map ((todo , i ) =>  i === index ? todo = newValue : todo))
 
 
-       }}  >Edit</button>           <button onClick={()=> setTodos(todos.filter ((todo,i) =>   i !==  index         )) }>X</button>    </li>
+       }}  >Edit</button>      <button onClick={()=> setTodos(todos.filter ((todo,i) =>   i !==  index ))}>X</button> </li>
 
 
       ))
